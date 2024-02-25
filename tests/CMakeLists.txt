@@ -1,12 +1,8 @@
 include(GoogleTest)
 
-set(
+file(GLOB TEST_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
 
-    TESTS_SOURCES
-    everything_work.cpp
-)
-
-add_executable(pumba_tests ${TESTS_SOURCES})
+add_executable(pumba_tests ${TEST_SOURCES})
 
 target_link_libraries(
     pumba_tests PUBLIC

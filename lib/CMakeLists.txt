@@ -1,10 +1,4 @@
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
-
-set(
-    SOURCES
-    src/pumba.cpp
-)
-add_library(pumba ${SOURCES})
+add_library(pumba INTERFACE)
 
 target_include_directories(
     pumba

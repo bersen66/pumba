@@ -1,7 +1,6 @@
-#pragma once
+#ifndef PUMBA_LIBRARY_INCLUDED
+#define PUMBA_LIBRARY_INCLUDED
 
-namespace pumba {
+#include <pumba/router.hpp>
 
-void Foo();
-
-} // namespace pumba
+#endif // macro PUMBA_LIBRARY_INCLUDED
