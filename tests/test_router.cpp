@@ -48,3 +48,19 @@ TEST(TestRouter, Insertion)
     }
 
 }
+
+
+TEST(TestRouter, erase)
+{
+    Router router(/*replicas=*/3);
+    router.EmplaceNode("Node");
+    router.EmplaceNode("Another one");
+
+    ASSERT_NO_THROW(router.EraseNode("Node"));
+    ASSERT_NO_THROW(router.EraseNode("Another one"));
+
+    ASSERT_TRUE(router.Empty());
+}
+
+
+

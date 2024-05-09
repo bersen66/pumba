@@ -85,7 +85,8 @@ private:
 
     void SpawnReplicas(NodeIt physical_node)
     {
-        for (const HashType& hash : HashTraits::Replicate(*physical_node, replicas_)) {
+        ring_[HashTraits::GetHash(*physical_node)] = physical_node;
+        for (const HashType& hash : HashTraits::Replicate(*physical_node, replicas_-1)) {
             ring_[hash] = physical_node;
         }
     }
